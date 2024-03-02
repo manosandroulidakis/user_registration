@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <title>User Management</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="display-4">User Management</h1>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary btn-lg" onclick="register()">Register New User</a>
+            <a class="btn btn-secondary btn-lg" onclick="user_list()">View Existing Users</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function register() {
+            window.location.href = '/register';
+        }
+    </script>
+
+    <script>
+        function user_list() {
+            window.location.href = '/user_list';
+        }
+    </script>
+
+</body>
+</html>
