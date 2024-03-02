@@ -2,8 +2,9 @@
 user registration app to run locally
 
 
-open mysql workbench
-run the user_registration_db.sql code
-fill in the right credentials in main.py
-run main.py
-visit 127.0.0.1:5000
+run docker-compose build
+then docker-compose up
+
+alternatively run the init.sql commands to your mysql database using workbench
+enter your credentials into main.py
+run python main.py

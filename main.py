@@ -7,7 +7,7 @@ app = Flask(__name__, static_folder='static')
 # Configure MySQL connection
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'yea1'
+app.config['MYSQL_PASSWORD'] = '31101991'
 app.config['MYSQL_DB'] = 'user_registration'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
@@ -26,11 +26,13 @@ def register():
 @app.route('/user_list')
 def user_list():
     try:
+        print('before db query')
         cur = mysql.connection.cursor()
         sql = "SELECT * FROM users;"
         cur.execute(sql)
         users=cur.fetchall()
         cur.close()
+        print('Users:', users)
     except Exception as e:
         print("Database selection error:", e)
         raise HTTPException(description="Internal Server Error", code=500)
