@@ -11,14 +11,14 @@ services:
     environment:
       - MYSQL_HOST=db
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=31101991
+      - MYSQL_PASSWORD=yea1
       - MYSQL_DB=user_registration
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: 31101991
+      MYSQL_ROOT_PASSWORD: yea1
       MYSQL_DATABASE: user_registration
       MYSQL_USER: root
-      MYSQL_PASSWORD: 31101991
+      MYSQL_PASSWORD: yea1
     ports:
       - "3306:3306"

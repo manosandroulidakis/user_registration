@@ -7,7 +7,7 @@ app = Flask(__name__, static_folder='static')
 # Configure MySQL connection
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '31101991'
+app.config['MYSQL_PASSWORD'] = 'yea1'
 app.config['MYSQL_DB'] = 'user_registration'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
