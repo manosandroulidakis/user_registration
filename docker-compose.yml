@@ -9,21 +9,19 @@ services:
     depends_on:
       - db
     environment:
-      - MYSQL_HOST=localhost
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=31101991
-      - MYSQL_DB=user_registration
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: yea1
+      MYSQL_DB: user_registration
     volumes:
       - .:/app
 
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: 31101991
+      MYSQL_ROOT_PASSWORD: yea1
       MYSQL_DATABASE: user_registration
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 31101991
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
