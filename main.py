@@ -33,7 +33,6 @@ def user_list():
         cur.execute(sql)
         users=cur.fetchall()
         cur.close()
-        print('Users:', users)
     except Exception as e:
         print("Database selection error:", e)
         raise HTTPException(description="Internal Server Error", code=500)
