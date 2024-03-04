@@ -34,8 +34,7 @@ def user_list():
         cur.close()
     except Exception as e:
         print("Database selection error:", e)
-        raise HTTPException(description="Internal Server Error", code=500)
-    
+        raise HTTPException(description="Internal Server Error", code=500) 
     return render_template('user_list.html', content=users)
 
 @app.route('/success')
